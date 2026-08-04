@@ -1,0 +1,8 @@
+dwl
+*.o
+*-protocol.c
+*-protocol.h
+config.h
+*.orig
+*.rej
+.ccls-cache

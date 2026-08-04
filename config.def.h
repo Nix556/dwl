@@ -9,7 +9,7 @@ static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will
 static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
-static const char *fonts[]                 = {"JetBrainsMono Nerd Font Mono:style=Bold:=10"};
+static const char *fonts[]                 = {"JetBrainsMono Nerd Font Mono:style=Regular:=10"};
 static const float rootcolor[]             = COLOR(0x000000ff);
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
@@ -101,7 +101,7 @@ static const char *filecmd[]      = { "thunar", NULL };
 static const char *browsercmd[]   = { "firefox", NULL };
 static const char *menucmd[]      = { "wmenu-run", NULL };
 static const char *editorcmd[]    = { "foot", "-e", "nvim", NULL };
-static const char *lockcmd[]      = { "swaylock", NULL };
+static const char *lockcmd[]      = { "/home/jonathan/.local/bin/lock", NULL };
 
 static const char *screenshotcmd[] = {
     "/bin/sh", "-c",
@@ -195,14 +195,14 @@ static const Key keys[] = {
 
     /* tags */
 	TAGKEYS(          XKB_KEY_1, XKB_KEY_exclam,                        0),
-	TAGKEYS(          XKB_KEY_2, XKB_KEY_at,                            1),
+	TAGKEYS(          XKB_KEY_2, XKB_KEY_quotedbl,                      1),
 	TAGKEYS(          XKB_KEY_3, XKB_KEY_numbersign,                    2),
-	TAGKEYS(          XKB_KEY_4, XKB_KEY_dollar,                        3),
+	TAGKEYS(          XKB_KEY_4, XKB_KEY_currency,                      3),
 	TAGKEYS(          XKB_KEY_5, XKB_KEY_percent,                       4),
-	TAGKEYS(          XKB_KEY_6, XKB_KEY_asciicircum,                   5),
-	TAGKEYS(          XKB_KEY_7, XKB_KEY_ampersand,                     6),
-	TAGKEYS(          XKB_KEY_8, XKB_KEY_asterisk,                      7),
-	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                     8),
+	TAGKEYS(          XKB_KEY_6, XKB_KEY_ampersand,                     5),
+	TAGKEYS(          XKB_KEY_7, XKB_KEY_slash,                     6),
+	TAGKEYS(          XKB_KEY_8, XKB_KEY_parenleft,                      7),
+	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenright,                     8),
     { MODKEY, XKB_KEY_0, view, {.ui = ~0} },
     { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_0, tag, {.ui = ~0} },
 
