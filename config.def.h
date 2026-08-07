@@ -96,48 +96,18 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]      = { "foot", NULL };
-static const char *filecmd[]      = { "thunar", NULL };     
-static const char *browsercmd[]   = { "firefox", NULL };
-static const char *menucmd[]      = { "wmenu-run", NULL };
-static const char *editorcmd[]    = { "foot", "-e", "nvim", NULL };
-static const char *lockcmd[]      = { "/home/jonathan/.local/bin/lock", NULL };
-
-static const char *screenshotcmd[] = {
-    "/bin/sh", "-c",
-    "grim -g \"$(slurp)\" - | wl-copy",
-    NULL
-};
-
-static const char *volupcmd[] = {
-    "/bin/sh", "-c",
-    "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+",
-    NULL
-};
-
-static const char *voldowncmd[] = {
-    "/bin/sh", "-c",
-    "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%-",
-    NULL
-};
-
-static const char *mutecmd[] = {
-    "/bin/sh", "-c",
-    "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    NULL
-};
-
-static const char *brightupcmd[] = {
-    "/bin/sh", "-c",
-    "brightnessctl -e4 -n2 set 2%+",
-    NULL
-};
-
-static const char *brightdowncmd[] = {
-    "/bin/sh", "-c",
-    "brightnessctl -e4 -n2 set 2%-",
-    NULL
-};
+static const char *termcmd[]       = { "foot", NULL };
+static const char *filecmd[]       = { "thunar", NULL };     
+static const char *browsercmd[]    = { "firefox", NULL };
+static const char *menucmd[]       = { "wmenu-run", NULL };
+static const char *editorcmd[]     = { "foot", "-e", "nvim", NULL };
+static const char *lockcmd[]       = { "/home/jonathan/.local/bin/lock", NULL };
+static const char *screenshotcmd[] = { "/home/jonathan/.local/bin/screenshot", NULL };
+static const char *volupcmd[]      = { "/home/jonathan/.local/bin/volup", NULL };
+static const char *voldowncmd[]    = { "/home/jonathan/.local/bin/voldown", NULL };
+static const char *mutecmd[]       = { "/home/jonathan/.local/bin/mute", NULL };
+static const char *brightupcmd[]   = { "/home/jonathan/.local/bin/brightup", NULL };
+static const char *brightdowncmd[] = { "/home/jonathan/.local/bin/brightdown", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
